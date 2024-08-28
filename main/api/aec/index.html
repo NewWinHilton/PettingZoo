@@ -11,7 +11,7 @@
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Parallel API" href="../parallel/" /><link rel="prev" title="Testing Environments" href="../../content/environment_tests/" />
         <link rel="canonical" href="https://pettingzoo.farama.org/api/aec.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 7.3.7 and Furo 2023.08.19.dev1 -->
+    <link rel="shortcut icon" href="../../_static/favicon.png"/><!-- Generated with Sphinx 7.4.7 and Furo 2023.08.19.dev1 -->
         <title>AEC API - PettingZoo Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=3e7f4c72" />
@@ -489,8 +489,9 @@
 <p>In an AEC environment, agents act sequentially, receiving updated observations and rewards before taking an action. The environment updates after each agent’s step, making it a natural way of representing sequential games such as Chess. The AEC model is flexible enough to handle any type of game that multi-agent RL can consider.</p>
 <p>with the underlying environment updating after each agent’s step. Agents receive updated observations and rewards at the beginning of their . The environment is updated after every step,
 This is a natural way of representing sequential games such as Chess, and</p>
-<figure class="align-default">
-<img alt="../../_images/aec_cycle_figure.png" src="../../_images/aec_cycle_figure.png" />
+<figure class="align-default" id="the-aec-diagram-of-chess">
+<a class="reference internal image-reference" href="../../_images/aec_cycle_figure.png"><img alt="../../_images/aec_cycle_figure.png" src="../../_images/aec_cycle_figure.png" style="width: 480px;" />
+</a>
 </figure>
 <p>This is in contrast to the <a class="reference external" href="https://en.wikipedia.org/wiki/Game_theory#Stochastic_outcomes_(and_relation_to_other_fields)"><em>Partially Observable Stochastic Game</em></a> (POSG) model, represented in our <a class="reference internal" href="../parallel/"><span class="doc std std-doc">Parallel API</span></a>, where agents act simultaneously and can only receive observations and rewards at the end of a cycle.
 This makes it difficult to represent sequential games, and results in race conditions–where agents choose to take actions which are mutually exclusive. This causes environment behavior to differ depending on internal resolution of agent order, resulting in hard-to-detect bugs if even a single race condition is not caught and handled by the environment (e.g., through tie-breaking).</p>
@@ -852,7 +853,7 @@ or any other resources that should be released.</p>
         })()
       </script>
 
-    <script src="../../_static/documentation_options.js?v=4b4b37dc"></script>
+    <script src="../../_static/documentation_options.js?v=d48881cd"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=7660844c"></script>
